@@ -10,63 +10,77 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
-
-    @IBOutlet weak var tableView: UITableView!
     
-    var images = [ UIImage(named: "cr1"), UIImage(named: "cr2"), UIImage(named: "cr4"), UIImage(named: "cr1"), UIImage(named: "cr2"), UIImage(named: "cr4") ]
+    @IBOutlet weak var tableView: UITableView!
+    var imageTag : Int?
+    var images = ["cr1","ME","cr1","cr2","ME","cr1","cr2"]
+    var names = ["cr1","mohamed gamal","cristiano Ronaldo","cristiano Ronaldo","mohamed gamal","cristiano Ronaldo","cristiano Ronaldo"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-    
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "SecondCell", bundle: nil), forCellReuseIdentifier: "SecondCell")
         // Do any additional setup after loading the view.
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if (section == 0){
-            return 1
-            
-        } else {
-            return images.count
-
-        }
+        return images.count + 1
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.section == 0){
+        if(indexPath.row == 0){
             let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell")  as! TableViewCell
             
-            
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SeconedCell", for: indexPath as IndexPath) as! SeconedCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SecondCell") as! SecondCell
+            cell.smallImg.image = UIImage(named: images[indexPath.row - 1 ])
+            cell.bigImg.image = UIImage(named: images[indexPath.row - 1])
+            cell.nameLabel.text = names[indexPath.row - 1 ]
+            cell.bigImg.tag = indexPath.row - 1
+            self.imageTag = cell.bigImg.tag
+            cell.bigImg.isUserInteractionEnabled = true
             
-            cell.img.image = self.images[indexPath.row]
-            cell.seconedImage.image = self.images[indexPath.row]
-            cell.lbl.text = "Cristiano Ronaldo"
-
+            let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.openGallery))
+            // Add gesture recognizer to your image view
+            cell.bigImg.addGestureRecognizer(recognizer)
+            
             return cell
-        }
-
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.section == 0){
-            return 110
-        } else {
-            return UITableView.automaticDimension
         }
         
     }
+        
+    @objc func openGallery(id : Int){
+      
+        performSegue(withIdentifier: "showBigImage", sender: self)
 
+    }
+        
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            if(indexPath.row == 0){
+                return 100
+            } else {
+                return UITableView.automaticDimension
+            }
+            
+        }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBigImage" {
+            let vc = segue.destination as! NewViewController
+            vc.the_img = UIImage(named: self.images[imageTag!])
+            print("button pressed")
+        }
+    }
 
+    
 }
 

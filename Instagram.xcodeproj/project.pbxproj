@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8658967922D61D6B00628696 /* SeconedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658967822D61D6B00628696 /* SeconedCell.swift */; };
+		868D7EDB22D960BD00DAB83D /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D7ED922D960BD00DAB83D /* SecondCell.swift */; };
+		868D7EDC22D960BD00DAB83D /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868D7EDA22D960BD00DAB83D /* SecondCell.xib */; };
+		868D7EE022D976F200DAB83D /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D7EDF22D976F200DAB83D /* NewViewController.swift */; };
 		8694CC3522D3A545000FD363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CC3422D3A545000FD363 /* AppDelegate.swift */; };
 		8694CC3722D3A545000FD363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CC3622D3A545000FD363 /* ViewController.swift */; };
 		8694CC3A22D3A545000FD363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8694CC3822D3A545000FD363 /* Main.storyboard */; };
@@ -16,11 +18,12 @@
 		8694CC4222D3A547000FD363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8694CC4022D3A547000FD363 /* LaunchScreen.storyboard */; };
 		8694CC4A22D3A67D000FD363 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CC4922D3A67D000FD363 /* TableViewCell.swift */; };
 		8694CC4C22D3A9D0000FD363 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694CC4B22D3A9D0000FD363 /* CollectionViewCell.swift */; };
-		8694CC4E22D3B4F4000FD363 /* MarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8694CC4D22D3B4F4000FD363 /* MarkerFelt.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8658967822D61D6B00628696 /* SeconedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeconedCell.swift; sourceTree = "<group>"; };
+		868D7ED922D960BD00DAB83D /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
+		868D7EDA22D960BD00DAB83D /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
+		868D7EDF22D976F200DAB83D /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		8694CC3122D3A545000FD363 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8694CC3422D3A545000FD363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8694CC3622D3A545000FD363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +34,6 @@
 		8694CC4322D3A547000FD363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8694CC4922D3A67D000FD363 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8694CC4B22D3A9D0000FD363 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		8694CC4D22D3B4F4000FD363 /* MarkerFelt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkerFelt.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +68,15 @@
 			children = (
 				8694CC3422D3A545000FD363 /* AppDelegate.swift */,
 				8694CC3622D3A545000FD363 /* ViewController.swift */,
+				868D7EDF22D976F200DAB83D /* NewViewController.swift */,
 				8694CC4922D3A67D000FD363 /* TableViewCell.swift */,
-				8658967822D61D6B00628696 /* SeconedCell.swift */,
 				8694CC4B22D3A9D0000FD363 /* CollectionViewCell.swift */,
+				868D7ED922D960BD00DAB83D /* SecondCell.swift */,
+				868D7EDA22D960BD00DAB83D /* SecondCell.xib */,
 				8694CC3822D3A545000FD363 /* Main.storyboard */,
 				8694CC3E22D3A547000FD363 /* Assets.xcassets */,
 				8694CC4022D3A547000FD363 /* LaunchScreen.storyboard */,
 				8694CC4322D3A547000FD363 /* Info.plist */,
-				8694CC4D22D3B4F4000FD363 /* MarkerFelt.ttf */,
 				8694CC3B22D3A545000FD363 /* Instagram.xcdatamodeld */,
 			);
 			path = Instagram;
@@ -137,10 +140,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8694CC4E22D3B4F4000FD363 /* MarkerFelt.ttf in Resources */,
 				8694CC4222D3A547000FD363 /* LaunchScreen.storyboard in Resources */,
 				8694CC3F22D3A547000FD363 /* Assets.xcassets in Resources */,
 				8694CC3A22D3A545000FD363 /* Main.storyboard in Resources */,
+				868D7EDC22D960BD00DAB83D /* SecondCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,11 +155,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8694CC4C22D3A9D0000FD363 /* CollectionViewCell.swift in Sources */,
+				868D7EDB22D960BD00DAB83D /* SecondCell.swift in Sources */,
+				868D7EE022D976F200DAB83D /* NewViewController.swift in Sources */,
 				8694CC3722D3A545000FD363 /* ViewController.swift in Sources */,
 				8694CC4A22D3A67D000FD363 /* TableViewCell.swift in Sources */,
 				8694CC3D22D3A545000FD363 /* Instagram.xcdatamodeld in Sources */,
 				8694CC3522D3A545000FD363 /* AppDelegate.swift in Sources */,
-				8658967922D61D6B00628696 /* SeconedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import UIKit
 class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource  {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var statusNames : [String] = ["profile 1 " ," profile 2 " ,"profile 3 " ,"profile 4 " ,"profile 5" ,"profile 6 ","profile 7 ","profile 8 " ]
+    var statusNames : [String] = ["profile 1 " ," profile 2 " ,"profile 3 " ,"profile 4 " ,"profile 5" ,"profile 6 " ]
     
         var images = [ UIImage(named: "ME"), UIImage(named: "cr4"), UIImage(named: "cr1"), UIImage(named: "cr2"), UIImage(named: "ME"), UIImage(named: "cr4") ]
     

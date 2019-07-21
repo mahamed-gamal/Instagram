@@ -1,18 +1,18 @@
 //
-//  SeconedCell.swift
+//  SecondCell.swift
 //  Instagram
 //
-//  Created by Mohamed Gamal on 7/10/19.
+//  Created by Mohamed Gamal on 7/13/19.
 //  Copyright © 2019 ME. All rights reserved.
 //
 
 import UIKit
 
-class SeconedCell: UITableViewCell {
-    @IBOutlet weak var img: UIImageView!
-    @IBOutlet weak var lbl: UILabel!
-    @IBOutlet weak var seconedImage: UIImageView!
-    
+class SecondCell: UITableViewCell {
+
+    @IBOutlet weak var bigImg: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var smallImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,6 +21,7 @@ class SeconedCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        // Configure the view for the selected state
     }
-
+    
 }
